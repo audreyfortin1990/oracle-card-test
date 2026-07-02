@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Oracle Cards</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 40px;
+        }
+
+        img {
+            width: 300px;
+            margin-top: 20px;
+            border-radius: 15px;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Pige une carte ✨</h2>
+
+    <button onclick="pickCard()">Piger</button>
+
+    <br>
+
+    <img id="cardImage" src="" />
+
+    <script>
+        const cards = [
+            "12.png",
+            "2.png",
+            "5.png"
+        ];
+
+        function pickCard() {
+            const random = Math.floor(Math.random() * cards.length);
+            document.getElementById("cardImage").src = cards[random];
+        }
+    </script>
+
+</body>
+</html>
